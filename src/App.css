@@ -13,15 +13,29 @@
   }
 }
 
-.App-header {
+.App-Navbar {
+  height:5vh;
+  background-color: cyan;
+}
+
+.App-Sidebar {
+  height: 95vh;
+  background-color: rgb(226, 174, 61);
+}
+
+.App-content {
   background-color: #282c34;
-  min-height: 100vh;
+  height: 95vh;
+
+}
+
+.Main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white;   
 }
 
 .App-link {
