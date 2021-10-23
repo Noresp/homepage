@@ -26,7 +26,10 @@ function App() {
             <div className="Main-content">
               <img src={logo} className="App-logo" alt="logo" />
               <p>
-                Edit <code>src/App.js</code> and save to reload.
+                Edit <code>src/App.tsx</code> and save to reload.
+              </p>
+              <p>
+                Now with support for Typescript!
               </p>
               <Button onClick={() => sendAlert()}>Test</Button>
               <a
