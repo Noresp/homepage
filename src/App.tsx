@@ -1,15 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+
+//bootstrap
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
+//components
+import Sidebar from './components/sidebar';
+import TierLists from './components/tier-lists';
+import Dashboard from './components/dashboard';
+import About from 'components/about';
 
 function App() {
   return (
@@ -25,22 +30,7 @@ function App() {
           </Row>
           <Row >
             <Col xs={2} className="App-Sidebar">
-              <div>
-                Left sidebar
-              </div>
-              <nav>
-                <ul>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/about">About</Link>
-                  </li>
-                  <li>
-                    <Link to="/users">Users</Link>
-                  </li>
-                </ul>
-              </nav>
+              <Sidebar />
             </Col>
             <Col xs={10} className="App-content">
               <div className="Main-content">
@@ -48,11 +38,11 @@ function App() {
                   <Route path="/about">
                     <About />
                   </Route>
-                  <Route path="/users">
-                    <Users />
+                  <Route path="/tier-lists">
+                    <TierLists />
                   </Route>
                   <Route path="/">
-                    <Home />
+                    <Dashboard />
                   </Route>
                 </Switch>
               </div>
@@ -62,41 +52,6 @@ function App() {
       </div>
     </Router>
   );
-}
-
-function sendAlert() {
-  console.log("Hello world");
-}
-
-function Home() {
-  return <>
-    <img src={logo} className="App-logo" alt="logo" />
-    <p>
-      Edit <code>src/App.tsx</code> and save to reload.
-    </p>
-    <p>
-      Now with support for Typescript!
-    </p>
-    <Button onClick={() => sendAlert()}>Test</Button>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Learn React
-    </a>
-  </>;
-}
-
-function About() {
-  return <p>
-    About!
-  </p>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
 }
 
 export default App;
