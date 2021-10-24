@@ -18,7 +18,7 @@ import About from 'components/about';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/homepage">
       <div className="App">
         <Container fluid>
           <Row >
