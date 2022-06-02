@@ -7,8 +7,7 @@ import {
 
 //bootstrap
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Row, Col } from 'react-bootstrap';
 
 //components
 import Sidebar from './components/sidebar';
@@ -36,7 +35,7 @@ function App() {
               <div className="Main-content">
                 <Switch>
                   <Route path="/about">
-                    <About />
+                    < About />
                   </Route>
                   <Route path="/tier-lists">
                     <TierLists />
